@@ -1,6 +1,4 @@
-# 🍖 El Gaucho Restaurant Website
 
-Website nhà hàng cao cấp với thiết kế hiện đại, responsive và đầy đủ tính năng.
 
 ## 📋 Tính năng
 
