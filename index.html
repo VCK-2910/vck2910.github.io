@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nhà hàng cao cấp - Ẩm thực đặc sắc">
+    <title>El Gaucho - Nhà Hàng Cao Cấp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>EL GAUCHO</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="#about" class="nav-link">Về Chúng Tôi</a></li>
+                    <li><a href="#menu" class="nav-link">Thực Đơn</a></li>
+                    <li><a href="#gallery" class="nav-link">Hình Ảnh</a></li>
+                    <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-subtitle">Chào Mừng Đến Với</h2>
+            <h1 class="hero-title">EL GAUCHO</h1>
+            <p class="hero-description">Trải nghiệm ẩm thực đẳng cấp quốc tế</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Xem Thực Đơn</a>
+                <a href="#contact" class="btn btn-secondary">Đặt Bàn Ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Về Chúng Tôi</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Câu Chuyện Của Chúng Tôi</h3>
+                    <p>Được thành lập với niềm đam mê ẩm thực và mong muốn mang đến trải nghiệm tuyệt vời nhất cho thực khách, El Gaucho tự hào là điểm đến hàng đầu cho những ai yêu thích món ăn chất lượng cao.</p>
+                    <p>Chúng tôi sử dụng nguyên liệu tươi ngon nhất, kết hợp với công thức chế biến độc đáo để tạo nên những món ăn đặc sắc, khó quên.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🍖</div>
+                            <h4>Nguyên Liệu Tươi Ngon</h4>
+                            <p>Chọn lọc kỹ càng từ nguồn cung cấp uy tín</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">👨‍🍳</div>
+                            <h4>Đầu Bếp Chuyên Nghiệp</h4>
+                            <p>Đội ngũ đầu bếp giàu kinh nghiệm quốc tế</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✨</div>
+                            <h4>Không Gian Sang Trọng</h4>
+                            <p>Thiết kế tinh tế, tạo không khí ấm cúng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/restaurant-interior.jpg" alt="Không gian nhà hàng" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Thực Đơn Đặc Biệt</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Khám phá những món ăn đặc sắc của chúng tôi</p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="appetizers">Khai Vị</button>
+                <button class="tab-btn" data-tab="mains">Món Chính</button>
+                <button class="tab-btn" data-tab="desserts">Tráng Miệng</button>
+                <button class="tab-btn" data-tab="drinks">Đồ Uống</button>
+            </div>
+
+            <div class="menu-content">
+                <!-- Appetizers -->
+                <div class="tab-content active" data-content="appetizers">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Caesar Salad</h4>
+                                <span class="price">150.000đ</span>
+                            </div>
+                            <p>Rau xà lách tươi, phô mai Parmesan, sốt Caesar đặc trưng</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Carpaccio Bò</h4>
+                                <span class="price">180.000đ</span>
+                            </div>
+                            <p>Thịt bò tươi thái mỏng, dầu ô liu, phô mai Parmesan</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Bruschetta</h4>
+                                <span class="price">120.000đ</span>
+                            </div>
+                            <p>Bánh mì nướng, cà chua tươi, húng quế, tỏi</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Tôm Cocktail</h4>
+                                <span class="price">200.000đ</span>
+                            </div>
+                            <p>Tôm tươi với sốt cocktail đặc biệt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="tab-content" data-content="mains">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <div class="menu-item-header">
+                                <h4>Bít Tết Ribeye</h4>
+                                <span class="price">650.000đ</span>
+                            </div>
+                            <p>350g thịt bò Úc cao cấp, khoai tây nghiền, rau củ nướng</p>
+                        </div>
+                        <div class="menu-item featured">
+                            <div class="menu-item-header">
+                                <h4>T-Bone Steak</h4>
+                                <span class="price">750.000đ</span>
+                            </div>
+                            <p>450g thịt bò T-bone, nướng hoàn hảo theo yêu cầu</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Cá Hồi Nướng</h4>
+                                <span class="price">450.000đ</span>
+                            </div>
+                            <p>Phi lê cá hồi Na Uy, sốt bơ chanh, măng tây</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Gà Nướng Thảo Mộc</h4>
+                                <span class="price">350.000đ</span>
+                            </div>
+                            <p>Ức gà nướng với thảo mộc, khoai tây chiên giòn</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Mì Ý Hải Sản</h4>
+                                <span class="price">320.000đ</span>
+                            </div>
+                            <p>Mì Ý với hải sản tươi sống, sốt cà chua</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Sườn Cừu Nướng</h4>
+                                <span class="price">580.000đ</span>
+                            </div>
+                            <p>Sườn cừu New Zealand, sốt rượu vang đỏ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="tab-content" data-content="desserts">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Tiramisu</h4>
+                                <span class="price">120.000đ</span>
+                            </div>
+                            <p>Bánh Tiramisu truyền thống Ý, cà phê Espresso</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Panna Cotta</h4>
+                                <span class="price">110.000đ</span>
+                            </div>
+                            <p>Kem Panna Cotta với sốt dâu tươi</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Chocolate Lava Cake</h4>
+                                <span class="price">130.000đ</span>
+                            </div>
+                            <p>Bánh chocolate nóng chảy, kem vanilla</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Crème Brûlée</h4>
+                                <span class="price">115.000đ</span>
+                            </div>
+                            <p>Kem caramen kiểu Pháp với lớp đường cháy giòn</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="tab-content" data-content="drinks">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Rượu Vang Đỏ</h4>
+                                <span class="price">800.000đ - 2.500.000đ</span>
+                            </div>
+                            <p>Tuyển chọn các loại vang cao cấp từ khắp thế giới</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Rượu Vang Trắng</h4>
+                                <span class="price">700.000đ - 2.000.000đ</span>
+                            </div>
+                            <p>Vang trắng thanh mát, hảo hạng</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Cocktail Đặc Biệt</h4>
+                                <span class="price">180.000đ</span>
+                            </div>
+                            <p>Các loại cocktail pha chế theo công thức độc quyền</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Nước Ép Tươi</h4>
+                                <span class="price">65.000đ</span>
+                            </div>
+                            <p>Nước ép trái cây tươi 100%</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h4>Cà Phê Đặc Biệt</h4>
+                                <span class="price">55.000đ</span>
+                            </div>
+                            <p>Espresso, Cappuccino, Latte, Americano</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hình Ảnh</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/dish1.jpg" alt="Món ăn 1" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <h4>Bít Tết Cao Cấp</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dish2.jpg" alt="Món ăn 2" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <h4>Hải Sản Tươi Sống</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dish3.jpg" alt="Món ăn 3" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <h4>Tráng Miệng Đặc Sắc</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/interior1.jpg" alt="Không gian 1" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <h4>Không Gian Sang Trọng</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/interior2.jpg" alt="Không gian 2" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <h4>Khu Vực VIP</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/bar.jpg" alt="Quầy bar" onerror="this.parentElement.style.display='none'">
+                    <div class="gallery-overlay">
+                        <h4>Quầy Bar</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Liên Hệ & Đặt Bàn</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Địa Chỉ</h4>
+                            <p>123 Đường ABC, Quận 1, TP.HCM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Điện Thoại</h4>
+                            <p>(028) 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@elgaucho.vn</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div>
+                            <h4>Giờ Mở Cửa</h4>
+                            <p>Thứ 2 - Chủ Nhật: 10:00 - 23:00</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Zalo</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Đặt Bàn Trực Tuyến</h3>
+                    <form id="reservationForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Họ và Tên *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Số Điện Thoại *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" name="time" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select name="guests" required>
+                                <option value="">Số Người *</option>
+                                <option value="1">1 Người</option>
+                                <option value="2">2 Người</option>
+                                <option value="3">3 Người</option>
+                                <option value="4">4 Người</option>
+                                <option value="5">5 Người</option>
+                                <option value="6+">6+ Người</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Ghi Chú" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đặt Bàn Ngay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>EL GAUCHO</h3>
+                    <p>Nhà hàng cao cấp mang đến trải nghiệm ẩm thực đẳng cấp quốc tế.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="#home">Trang Chủ</a></li>
+                        <li><a href="#about">Về Chúng Tôi</a></li>
+                        <li><a href="#menu">Thực Đơn</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Giờ Mở Cửa</h4>
+                    <ul>
+                        <li>Thứ 2 - Thứ 6: 10:00 - 23:00</li>
+                        <li>Thứ 7 - Chủ Nhật: 09:00 - 23:30</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <ul>
+                        <li>📍 123 Đường ABC, Q1, TP.HCM</li>
+                        <li>📞 (028) 1234 5678</li>
+                        <li>✉️ info@elgaucho.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 El Gaucho. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
