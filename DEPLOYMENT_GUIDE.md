@@ -84,29 +84,43 @@ git push -u origin main
    - Chọn domain `vck2910.id.vn`
    - Tìm "Quản lý DNS" hoặc "DNS Management"
 
-2. **Thêm CNAME Record:**
+2. **⚠️ QUAN TRỌNG: Xóa A records cũ (nếu có)**
+   - Tìm các A record với Host `@` 
+   - Xóa hết
+
+3. **Thêm 4 A Records cho root domain:**
+   - Type: `A` | Host: `@` | Value: `185.199.108.153` | TTL: `3600`
+   - Type: `A` | Host: `@` | Value: `185.199.109.153` | TTL: `3600`
+   - Type: `A` | Host: `@` | Value: `185.199.110.153` | TTL: `3600`
+   - Type: `A` | Host: `@` | Value: `185.199.111.153` | TTL: `3600`
+   - Nhấn Save sau mỗi record
+
+4. **Thêm CNAME cho www:**
    - Type: `CNAME`
-   - Host/Name: `@` hoặc để trống
-   - Value/Target: `vck2910.github.io`
+   - Host: `www`
+   - Value: `vck2910.github.io`
    - TTL: `3600`
    - Nhấn Save
 
-3. **Thêm CNAME cho www (tùy chọn):**
-   - Type: `CNAME`
-   - Host: `www`
-   - Value: `vck2910.id.vn`
-   - TTL: `3600`
+5. **Chờ 30 phút - 24 giờ** để DNS cập nhật
 
-4. **Chờ 30 phút - 24 giờ** để DNS cập nhật
+#### Bước 6: Cấu hình Custom Domain trên GitHub
 
-#### Bước 6: Kiểm tra kết quả
+1. **Vào GitHub repo** của bạn
+2. **Settings → Pages**
+3. Phần **"Custom domain"**, nhập: `vck2910.id.vn`
+4. Nhấn **Save**
+5. Chờ GitHub verify DNS (1-5 phút)
+6. ✅ Khi verify xong, tick **"Enforce HTTPS"**
+
+#### Bước 7: Kiểm tra kết quả
 1. Mở: `https://vck2910.id.vn`
 2. Nếu thấy website → ✅ Thành công!
 3. Nếu không: 
    - Chờ thêm chút và refresh (Ctrl+F5)
    - Kiểm tra DNS Records có đúng không
 
-#### Bước 7: Cập nhật lần sau
+#### Bước 8: Cập nhật lần sau
 Mỗi khi bạn muốn cập nhật website:
 
 ```powershell

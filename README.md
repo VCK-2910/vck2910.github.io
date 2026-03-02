@@ -249,6 +249,21 @@ Website này được tạo cho mục đích cá nhân. Bạn có thể tự do 
 ### **Cấu hình DNS phức tạp?**
 👉 Xem file: **[DNS_SETUP_GUIDE.md](DNS_SETUP_GUIDE.md)** - Hướng dẫn cấu hình DNS chi tiết
 
+### **⚠️ Gặp lỗi "Tên Record không hợp lệ"?**
+👉 Xem file: **[FIX_CNAME_ERROR.md](FIX_CNAME_ERROR.md)** - Fix lỗi không thể tạo CNAME @ ngay!
+
+### **🔧 GitHub báo "Domain does not resolve"?**
+👉 Xem file: **[FIX_GITHUB_DNS_ERROR.md](FIX_GITHUB_DNS_ERROR.md)** - Fix lỗi DNS không resolve!
+
+### **🔍 Kiểm tra DNS nhanh:**
+```powershell
+# Chạy script kiểm tra DNS tự động
+.\check-dns.ps1
+
+# Hoặc file .bat
+.\check-dns.bat
+```
+
 ---
 
 ## 🎯 Các bước tiếp theo

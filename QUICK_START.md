@@ -72,18 +72,37 @@
 1. **Đăng nhập** tài khoản zonedns
 2. Chọn domain **`vck2910.id.vn`**
 3. Tìm **"DNS Management"** hoặc **"Zone Management"**
-4. **Thêm CNAME Record:**
+4. **Thêm 4 A Records cho root domain:**
 
-| Field | Value |
-|-------|-------|
-| **Type** | CNAME |
-| **Host** | @ (hoặc để trống) |
-| **Target/Value** | `vck2910.github.io` |
-| **TTL** | 3600 |
+**Xóa các A record cũ (nếu có), sau đó thêm 4 records sau:**
 
-5. **Save**
+| Type | Host | Value | TTL |
+|------|------|-------|-----|
+| A | @ | 185.199.108.153 | 3600 |
+| A | @ | 185.199.109.153 | 3600 |
+| A | @ | 185.199.110.153 | 3600 |
+| A | @ | 185.199.111.153 | 3600 |
+
+5. **Thêm CNAME cho www:**
+
+| Type | Host | Value | TTL |
+|------|------|-------|-----|
+| CNAME | www | vck2910.github.io | 3600 |
+
+6. **Save**
 
 **⏳ Chờ 30 phút - 24 giờ** (bình thường 1-2 giờ)
+
+---
+
+### ⚙️ **Bước Bổ Sung: Cấu hình Custom Domain trên GitHub**
+
+1. Vào **GitHub repo** của bạn
+2. **Settings → Pages**
+3. Ở phần **"Custom domain"**, nhập: `vck2910.id.vn`
+4. Nhấn **Save**
+5. Chờ GitHub verify DNS (1-5 phút)
+6. Khi verify xong, tick **"Enforce HTTPS"**
 
 ---
 

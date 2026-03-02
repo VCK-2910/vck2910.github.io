@@ -34,17 +34,19 @@ Bạn cần biết 2 loại chính:
   Host: @
   Value: 123.45.67.89 (IP của hosting)
   ```
-- **Khi dùng:** Shared Hosting, VPS
+- **Khi dùng:** Root domain (@), Shared Hosting, VPS, **GitHub Pages**
+- ⚠️ **Bắt buộc cho root domain** - không thể dùng CNAME!
 
 ### **CNAME Record**
-- **Dùng cho:** Trỏ domain tới domain khác
+- **Dùng cho:** Trỏ subdomain tới domain khác
 - **Ví dụ:**
   ```
   Type: CNAME
-  Host: @
+  Host: www (hoặc blog, shop, etc.)
   Value: vck2910.github.io (hoặc netlify.app, vercel.app)
   ```
-- **Khi dùng:** GitHub Pages, Netlify, Vercel
+- **Khi dùng:** Subdomains như www, blog, shop
+- ⚠️ **KHÔNG thể dùng cho root domain (@)**
 
 ---
 
@@ -62,30 +64,39 @@ Bạn cần biết 2 loại chính:
 - Tìm bảng với các cột: **Type | Host | Value | TTL**
 - Hoặc: **Type | Name | Content | TTL**
 
-#### **Bước 3: Thêm CNAME Record**
+#### **Bước 3: Thêm A Records (Cho Root Domain)**
 
-**Tìm hàng có `@` record (root domain):**
+⚠️ **LƯU Ý:** Không thể dùng CNAME cho root domain (@)! Phải dùng A records.
+
+**Xóa A records cũ (nếu có), sau đó thêm 4 A records sau:**
 
 | Type | Host | Value | TTL |
 |------|------|-------|-----|
-| CNAME | @ | vck2910.github.io | 3600 |
+| A | @ | 185.199.108.153 | 3600 |
+| A | @ | 185.199.109.153 | 3600 |
+| A | @ | 185.199.110.153 | 3600 |
+| A | @ | 185.199.111.153 | 3600 |
 
-**Nếu không có mục edit `@`:**
-- Xóa A record cũ (nếu có)
-- Thêm CNAME mới:
-  - **Type:** CNAME
-  - **Host:** @ (hoặc để trống)
-  - **Value:** vck2910.github.io
-  - **TTL:** 3600
-  - **Save**
+**Cách thêm:**
+- Nhấn **"Add Record"** hoặc **"+"**
+- **Type:** A
+- **Host:** @ (hoặc để trống)
+- **Value:** (mỗi IP một record)
+- **TTL:** 3600
+- **Save**
+- Lặp lại 4 lần cho 4 IP addresses
 
-#### **Bước 4: Thêm www (Tùy Chọn)**
+#### **Bước 4: Thêm CNAME cho www**
+
 | Type | Host | Value | TTL |
 |------|------|-------|-----|
-| CNAME | www | vck2910.id.vn | 3600 |
+| CNAME | www | vck2910.github.io | 3600 |
 
+- **Type:** CNAME
 - **Host:** www
-- **Value:** vck2910.id.vn (hoặc github pages domain)
+- **Value:** vck2910.github.io
+- **TTL:** 3600
+- **Save**
 
 #### **Bước 5: Chờ DNS Cập Nhật**
 - ⏳ **30 phút** - thường nhanh nhất
