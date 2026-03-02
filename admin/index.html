@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Page Builder | El Gaucho</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-logo">
+            <i class="fas fa-edit"></i>
+            <h1>El Gaucho Admin</h1>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-action" id="previewBtn" title="Preview">
+                <i class="fas fa-eye"></i> Preview
+            </button>
+            <button class="btn-action" id="saveBtn" title="Save">
+                <i class="fas fa-save"></i> Lưu
+            </button>
+            <button class="btn-action" id="exportBtn" title="Export HTML">
+                <i class="fas fa-download"></i> Export
+            </button>
+            <button class="btn-action btn-danger" id="exitBtn" title="Exit">
+                <i class="fas fa-times"></i> Thoát
+            </button>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <!-- Left Sidebar - Components Library -->
+        <aside class="sidebar sidebar-left">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-cubes"></i> Thành Phần</h2>
+            </div>
+            
+            <div class="components-section">
+                <div class="section-title">Layout</div>
+                <div class="component-item" draggable="true" data-type="section">
+                    <i class="fas fa-border-all"></i>
+                    <span>Section</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="container">
+                    <i class="fas fa-square"></i>
+                    <span>Container</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="row">
+                    <i class="fas fa-grip-lines"></i>
+                    <span>Row</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="column">
+                    <i class="fas fa-columns"></i>
+                    <span>Column</span>
+                </div>
+            </div>
+
+            <div class="components-section">
+                <div class="section-title">Content</div>
+                <div class="component-item" draggable="true" data-type="heading">
+                    <i class="fas fa-heading"></i>
+                    <span>Heading</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="text">
+                    <i class="fas fa-paragraph"></i>
+                    <span>Text</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="button">
+                    <i class="fas fa-hand-pointer"></i>
+                    <span>Button</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="image">
+                    <i class="fas fa-image"></i>
+                    <span>Image</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="video">
+                    <i class="fas fa-video"></i>
+                    <span>Video</span>
+                </div>
+            </div>
+
+            <div class="components-section">
+                <div class="section-title">Menu & Navigation</div>
+                <div class="component-item" draggable="true" data-type="menu">
+                    <i class="fas fa-bars"></i>
+                    <span>Menu</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="hero">
+                    <i class="fas fa-desktop"></i>
+                    <span>Hero Banner</span>
+                </div>
+            </div>
+
+            <div class="components-section">
+                <div class="section-title">Form Elements</div>
+                <div class="component-item" draggable="true" data-type="input">
+                    <i class="fas fa-text-width"></i>
+                    <span>Input</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="textarea">
+                    <i class="fas fa-align-left"></i>
+                    <span>Textarea</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="form">
+                    <i class="fas fa-wpforms"></i>
+                    <span>Form</span>
+                </div>
+            </div>
+
+            <div class="components-section">
+                <div class="section-title">Special</div>
+                <div class="component-item" draggable="true" data-type="card">
+                    <i class="fas fa-id-card"></i>
+                    <span>Card</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="gallery">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="divider">
+                    <i class="fas fa-minus"></i>
+                    <span>Divider</span>
+                </div>
+                <div class="component-item" draggable="true" data-type="spacer">
+                    <i class="fas fa-arrows-alt-v"></i>
+                    <span>Spacer</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Canvas Area -->
+        <main class="canvas-wrapper">
+            <div class="canvas-toolbar">
+                <div class="toolbar-left">
+                    <button class="tool-btn" id="undoBtn" title="Undo">
+                        <i class="fas fa-undo"></i>
+                    </button>
+                    <button class="tool-btn" id="redoBtn" title="Redo">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                    <span class="separator"></span>
+                    <button class="tool-btn active" id="desktopView" title="Desktop View">
+                        <i class="fas fa-desktop"></i>
+                    </button>
+                    <button class="tool-btn" id="tabletView" title="Tablet View">
+                        <i class="fas fa-tablet-alt"></i>
+                    </button>
+                    <button class="tool-btn" id="mobileView" title="Mobile View">
+                        <i class="fas fa-mobile-alt"></i>
+                    </button>
+                </div>
+                <div class="toolbar-right">
+                    <span class="zoom-label">Zoom:</span>
+                    <button class="tool-btn" id="zoomOut">
+                        <i class="fas fa-search-minus"></i>
+                    </button>
+                    <span class="zoom-value" id="zoomValue">100%</span>
+                    <button class="tool-btn" id="zoomIn">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="canvas-container" id="canvasContainer">
+                <div class="canvas" id="canvas" data-zoom="100">
+                    <!-- Drop zone message -->
+                    <div class="empty-canvas">
+                        <i class="fas fa-hand-pointer"></i>
+                        <h2>Bắt Đầu Thiết Kế</h2>
+                        <p>Kéo và thả các thành phần từ bên trái vào đây</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Properties Panel -->
+        <aside class="sidebar sidebar-right">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-cog"></i> Thuộc Tính</h2>
+            </div>
+
+            <div class="properties-panel" id="propertiesPanel">
+                <div class="no-selection">
+                    <i class="fas fa-mouse-pointer"></i>
+                    <p>Chọn một thành phần để chỉnh sửa</p>
+                </div>
+            </div>
+
+            <!-- Style Properties Template -->
+            <div class="properties-content" id="propertiesContent" style="display: none;">
+                <!-- Content Tab -->
+                <div class="property-tabs">
+                    <button class="tab-btn active" data-tab="content">
+                        <i class="fas fa-font"></i> Nội dung
+                    </button>
+                    <button class="tab-btn" data-tab="style">
+                        <i class="fas fa-paint-brush"></i> Kiểu dáng
+                    </button>
+                    <button class="tab-btn" data-tab="advanced">
+                        <i class="fas fa-sliders-h"></i> Nâng cao
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content active" data-content="content">
+                    <div class="property-group">
+                        <label>Text Content</label>
+                        <input type="text" class="property-input" id="propText" placeholder="Nhập nội dung...">
+                    </div>
+                    <div class="property-group">
+                        <label>Link URL</label>
+                        <input type="text" class="property-input" id="propLink" placeholder="https://...">
+                    </div>
+                    <div class="property-group">
+                        <label>Alt Text</label>
+                        <input type="text" class="property-input" id="propAlt" placeholder="Mô tả hình ảnh...">
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="style">
+                    <div class="property-group">
+                        <label>Background Color</label>
+                        <input type="color" class="property-input" id="propBgColor">
+                    </div>
+                    <div class="property-group">
+                        <label>Text Color</label>
+                        <input type="color" class="property-input" id="propTextColor">
+                    </div>
+                    <div class="property-group">
+                        <label>Font Size</label>
+                        <div class="input-group">
+                            <input type="number" class="property-input" id="propFontSize" min="8" max="100">
+                            <select class="property-select" id="propFontUnit">
+                                <option>px</option>
+                                <option>em</option>
+                                <option>rem</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="property-group">
+                        <label>Padding</label>
+                        <div class="spacing-inputs">
+                            <input type="number" placeholder="Top" id="propPaddingTop">
+                            <input type="number" placeholder="Right" id="propPaddingRight">
+                            <input type="number" placeholder="Bottom" id="propPaddingBottom">
+                            <input type="number" placeholder="Left" id="propPaddingLeft">
+                        </div>
+                    </div>
+                    <div class="property-group">
+                        <label>Margin</label>
+                        <div class="spacing-inputs">
+                            <input type="number" placeholder="Top" id="propMarginTop">
+                            <input type="number" placeholder="Right" id="propMarginRight">
+                            <input type="number" placeholder="Bottom" id="propMarginBottom">
+                            <input type="number" placeholder="Left" id="propMarginLeft">
+                        </div>
+                    </div>
+                    <div class="property-group">
+                        <label>Border Radius</label>
+                        <input type="number" class="property-input" id="propBorderRadius" placeholder="px">
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="advanced">
+                    <div class="property-group">
+                        <label>CSS Class</label>
+                        <input type="text" class="property-input" id="propClass" placeholder="class-name">
+                    </div>
+                    <div class="property-group">
+                        <label>CSS ID</label>
+                        <input type="text" class="property-input" id="propId" placeholder="element-id">
+                    </div>
+                    <div class="property-group">
+                        <label>Custom CSS</label>
+                        <textarea class="property-textarea" id="propCustomCSS" rows="5" placeholder="color: red;&#10;font-size: 16px;"></textarea>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="property-actions">
+                    <button class="btn-delete" id="deleteElement">
+                        <i class="fas fa-trash"></i> Xóa Element
+                    </button>
+                    <button class="btn-duplicate" id="duplicateElement">
+                        <i class="fas fa-copy"></i> Nhân Bản
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content modal-fullscreen">
+            <div class="modal-header">
+                <h3>Preview</h3>
+                <button class="modal-close" id="closePreview">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="previewFrame" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
